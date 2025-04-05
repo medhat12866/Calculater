@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: hsl(0, 0%, 95%);
+}
+#calculater {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+#display{
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    background: hsl(0, 0%, 15%);
+    border: none;
+    outline: none;
+    color: white;
+}
+#keys {
+    background: hsl(0, 0%, 20%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    background: hsl(0, 0%, 30%);
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+@media (max-width:768px) {
+    #calculater {
+        max-width: 400px;
+    }
+    #display{
+        font-size: 4rem;
+    }
+    button {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+    }
+
+}
+button:hover{
+    background: hsl(0, 0%, 40%);
+}
+button:active{
+    background: hsl(0, 0%, 50%);
+}
+button:nth-child(1),
+button:nth-child(5),
+button:nth-child(9),
+button:nth-child(13),
+button:nth-child(17){
+    background: hsl(35, 100%, 55%);
+}
+button:nth-child(1):hover,
+button:nth-child(5):hover,
+button:nth-child(9):hover,
+button:nth-child(13):hover,
+button:nth-child(17):hover{
+    background: hsl(35, 100%, 65%);
+}
+button:nth-child(1):active,
+button:nth-child(5):active,
+button:nth-child(9):active,
+button:nth-child(13):active,
+button:nth-child(17):active{
+    background: hsl(35, 100%, 75%);
+}
